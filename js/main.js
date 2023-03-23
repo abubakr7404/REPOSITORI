@@ -1,8 +1,16 @@
-
+/**
+* Template Name: ComingSoon
+* Updated: Mar 09 2023 with Bootstrap v5.2.3
+* Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
 (function() {
   "use strict";
 
-  
+  /**
+   * Easy selector helper function
+   */
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
@@ -12,7 +20,9 @@
     }
   }
 
-  
+  /**
+   * Easy event listener function
+   */
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all)
     if (selectEl) {
@@ -24,12 +34,16 @@
     }
   }
 
-  
+  /**
+   * Easy on scroll event listener 
+   */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
   }
 
-  
+  /**
+   * Back to top button
+   */
   let backtotop = select('.back-to-top')
   if (backtotop) {
     const toggleBacktotop = () => {
@@ -43,7 +57,9 @@
     onscroll(document, toggleBacktotop)
   }
 
-  
+  /**
+   * Countdown timer
+   */
   let countdown = select('.countdown');
   const output = countdown.innerHTML;
 
